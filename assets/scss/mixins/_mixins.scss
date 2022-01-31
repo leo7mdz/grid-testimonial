@@ -1,0 +1,12 @@
+@mixin color($name, $color) {
+  &-#{$name} {
+    background-color: $color;
+    color: white;
+  }
+}
+
+@mixin break($breakpoint) {
+  @media screen and (min-width: map-get($map:$breakpoints, $key:$breakpoint)) {
+    @content;
+  }
+}
